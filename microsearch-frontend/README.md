@@ -25,7 +25,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 
-## 初始化
+## 项目初始化
 
 使用 Ant Design 初始化项目：
 
@@ -37,7 +37,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 
-## WebStorm 代码美化设置
+## WebStorm 代码格式化设置
 
 设置中搜索 `prettier`
 
@@ -49,3 +49,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 `Ctrl+Alt+L` 就可以使用了
 
+
+
+## 搜索状态还原
+
+用 url 记录页面搜索状态，当用户刷新页面时，能够从 url 还原之前的搜索状态。

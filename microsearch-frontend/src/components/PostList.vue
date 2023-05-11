@@ -1,10 +1,14 @@
 <template>
   文章列表
-  <img :src="gege" />
+  <img :src="gege" class="gege" />
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import gege from "../assets/logo.png";
 </script>
 
-<style scoped></style>
+<style scoped>
+.gege {
+  width: 200px;
+}
+</style>
