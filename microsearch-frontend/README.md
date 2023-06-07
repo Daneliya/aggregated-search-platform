@@ -54,3 +54,13 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## 搜索状态还原
 
 用 url 记录页面搜索状态，当用户刷新页面时，能够从 url 还原之前的搜索状态。
+
+url  <=> 页面状态
+
+核心小技巧：把同步状态
+
+
+
+## 联调后端
+
+[起步 | Axios 中文文档 | Axios 中文网 (axios-http.cn)](https://www.axios-http.cn/docs/intro)
