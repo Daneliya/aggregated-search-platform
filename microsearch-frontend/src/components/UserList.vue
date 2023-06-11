@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import gege from "@/assets/logo.png";
+import gege from "@/assets/gege.jpg";
 import { withDefaults, defineProps } from "vue";
 
 interface Props {

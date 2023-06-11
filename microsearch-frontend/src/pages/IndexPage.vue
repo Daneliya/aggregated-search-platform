@@ -2,7 +2,7 @@
   <!--  搜索框  -->
   <div class="index-page">
     <a-input-search
-      v-model:value="searchParams.text"
+      v-model:value="searchText"
       placeholder="请输入搜索关键词"
       enter-button="搜索"
       size="large"
@@ -11,6 +11,7 @@
   </div>
   <!--  {{ JSON.stringify(postList) }}-->
   <!--  标签页  -->
+  <MyDivider />
   <a-tabs v-model:activeKey="activeKey" @change="onTabChange">
     <a-tab-pane key="post" tab="文章">
       <PostList :post-list="postList" />
@@ -61,8 +62,9 @@ const activeKey = route.params.category;
 
 // 初始值
 const initSearchParams = {
+  type: activeKey,
   text: "",
-  pageSize: 10,
+  pageSize: 20,
   pageNum: 1,
 };
 
@@ -145,7 +147,9 @@ watchEffect(() => {
   searchParams.value = {
     ...initSearchParams,
     text: route.query.text,
+    type: route.params.category,
   } as any;
+  loadData(searchParams.value);
 });
 
 // 搜索方法
@@ -155,7 +159,11 @@ const onSearch = (value: string) => {
     // query: {
     //   text: value,
     // },
-    query: searchParams.value,
+    query: {
+      ...searchParams.value,
+      text: value,
+    },
+    // query: searchParams.value,
   });
 };
 

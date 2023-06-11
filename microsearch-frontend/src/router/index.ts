@@ -5,11 +5,17 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "home",
+    meta: {
+      title: "聚合搜索平台",
+    },
     component: IndexPage,
   },
   {
     path: "/:category",
-    name: "category",
+    name: "聚合搜索平台",
+    meta: {
+      title: "聚合搜索平台",
+    },
     component: IndexPage,
   },
 ];
